@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport content="width=device-width, initial-scale=1>
-	<title>Agendamento Pet Shop</title> 												<!-- title of tab -->
+	<title>Agendamento</title> 												<!-- title of tab -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link href="css/font-awesome.min.css" rel="stylesheet"/>                            <!-- href = reference to actual file -->
@@ -19,50 +19,73 @@
 
 <!--li class="prev">&#10094;</li-->
 <ul class="weekdays">    
-    &#10094;
-  <li>Segunda</li>
-  <li>Terça</li>
-  <li>Quarta</li>
-  <li>Quinta</li>
-  <li>Sexta</li>
-  <li>Sábado</li>
-  <li>Domingo</li>
-    &#10095;
+    <!--&#10094;-->
+  <li id="weekday"></li>
+  <li id="weekday+1"></li>
+  <li id="weekday+2"></li>
+  <li id="weekday+3"></li>
+  <li id="weekday+4"></li>
+  <li id="weekday+5"></li>
+  <li id="weekday+6"></li>
+    <!--&#10095;-->
 </ul>
 <!--li class="next">&#10095;</li-->
 
 <ul class="days"> 
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
+  <li id="day"></li>
+  <li id="day+1"></li>
+  <li id="day+2"></li>
+  <li id="day+3"></li>
+  <li id="day+4"></li>
+  <li id="day+5"></li>
+  <li id="day+6"></li>
+    <ul class="times">
+        <hr>
+      <li>8:00</li>
+        <hr>
+      <li>8:30</li>
+        <hr>
+      <li>9:00</li>
+        <hr>
+      <li>9:30</li>
+        <hr>
+      <li>10:00</li>
+        <hr>
+      <li>10:30</li>
+        <hr>
+      <li>11:00</li>
+        <hr>
+      <li>11:30</li>
+        <hr>
+      <li>12:00</li>
+        <hr>
+      <li>12:30</li>
+        <hr>
+      <li>13:00</li>
+        <hr>
+      <li>13:30</li>
+        <hr>
+      <li>14:00</li>
+        <hr>
+      <li>14:30</li>
+        <hr>
+      <li>15:00</li>
+        <hr>
+      <li>15:30</li>
+        <hr>
+      <li>16:00</li>
+        <hr>
+      <li>16:30</li>
+        <hr>
+      <li>17:00</li>
+        <hr>
+      <li>17:30</li>
+        <hr>
+      <li>18:00</li>
+        <hr>
+      <li>18:30</li>
+        <hr>
+    </ul>
 </ul>
     
 </body>
@@ -72,7 +95,29 @@ n =  new Date();
 y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
+w = n.getDay();
+weekday=new Array(7);
+weekday[0]="Domingo";
+weekday[1]="Segunda";
+weekday[2]="Terça";
+weekday[3]="Quarta";
+weekday[4]="Quinta";
+weekday[5]="Sexta";
+weekday[6]="Sábado";
 document.getElementById("day").innerHTML = d;
+document.getElementById("day+1").innerHTML = d+1;
+document.getElementById("day+2").innerHTML = d+2;
+document.getElementById("day+3").innerHTML = d+3;
+document.getElementById("day+4").innerHTML = d+4;
+document.getElementById("day+5").innerHTML = d+5;
+document.getElementById("day+6").innerHTML = d+6;
+document.getElementById("weekday").innerHTML = weekday[w];
+document.getElementById("weekday+1").innerHTML = weekday[(w+1)%7];
+document.getElementById("weekday+2").innerHTML = weekday[(w+2)%7];
+document.getElementById("weekday+3").innerHTML = weekday[(w+3)%7];
+document.getElementById("weekday+4").innerHTML = weekday[(w+4)%7];
+document.getElementById("weekday+5").innerHTML = weekday[(w+5)%7];
+document.getElementById("weekday+6").innerHTML = weekday[(w+6)%7];
 document.getElementById("month").innerHTML = m;
 document.getElementById("year").innerHTML = y;
 document.getElementById("date").innerHTML = d + "/" + m + "/" + y;

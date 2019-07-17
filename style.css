@@ -43,14 +43,14 @@ body {font-family: Verdana, sans-serif;}
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 13.48%;
   color: #666;
   text-align: center;
 }
 
 /* Days (1-31) */
 .days {
-  padding: 10px 0;
+  padding: 0px 0;
   background: #eee;
   margin: 0;
 }
@@ -58,8 +58,23 @@ body {font-family: Verdana, sans-serif;}
 .days li {
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 13.48%;
   text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.times {
+  padding: 0px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.times li {
+  list-style-type: none;
+  width: 13.48%;
+  text-align: left;
   margin-bottom: 5px;
   font-size:12px;
   color: #777;
@@ -70,4 +85,12 @@ body {font-family: Verdana, sans-serif;}
   padding: 5px;
   background: #1abc9c;
   color: white !important
+}
+
+hr {
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    margin-top: 1px;
+    margin-bottom:1px;
 }
