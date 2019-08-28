@@ -96,6 +96,7 @@ y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
 w = n.getDay();
+lastDay = new Date(y, m+1, 0).getDate() + 1;
 weekday=new Array(7);
 weekday[0]="Domingo";
 weekday[1]="Segunda";
@@ -105,12 +106,30 @@ weekday[4]="Quinta";
 weekday[5]="Sexta";
 weekday[6]="Sábado";
 document.getElementById("day").innerHTML = d;
-document.getElementById("day+1").innerHTML = d+1;
-document.getElementById("day+2").innerHTML = d+2;
-document.getElementById("day+3").innerHTML = d+3;
-document.getElementById("day+4").innerHTML = d+4;
-document.getElementById("day+5").innerHTML = d+5;
-document.getElementById("day+6").innerHTML = d+6;
+if(d+1<lastDay)
+    document.getElementById("day+1").innerHTML = (d+1)%lastDay;
+else
+    document.getElementById("day+1").innerHTML = (d+2)%lastDay;
+if(d+2<lastDay)
+    document.getElementById("day+2").innerHTML = (d+2)%lastDay;
+else
+    document.getElementById("day+2").innerHTML = (d+3)%lastDay;
+if(d+3<lastDay)
+    document.getElementById("day+3").innerHTML = (d+3)%lastDay;
+else
+    document.getElementById("day+3").innerHTML = (d+4)%lastDay;
+if(d+4<lastDay)
+    document.getElementById("day+4").innerHTML = (d+4)%lastDay;
+else
+    document.getElementById("day+4").innerHTML = (d+5)%lastDay;
+if(d+5<lastDay)
+    document.getElementById("day+5").innerHTML = (d+5)%lastDay;
+else
+    document.getElementById("day+5").innerHTML = (d+6)%lastDay;
+if(d+6<lastDay)
+    document.getElementById("day+6").innerHTML = (d+6)%lastDay;
+else
+    document.getElementById("day+6").innerHTML = (d+7)%lastDay;
 document.getElementById("weekday").innerHTML = weekday[w];
 document.getElementById("weekday+1").innerHTML = weekday[(w+1)%7];
 document.getElementById("weekday+2").innerHTML = weekday[(w+2)%7];

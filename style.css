@@ -1,6 +1,19 @@
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
+.bar-container {
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    background-color: forestgreen;
+}
+
 /* Month header */
 .month {
   padding: 70px 25px;
