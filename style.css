@@ -20,7 +20,7 @@ td {
 
 /* Month header */
 .month {
-    padding: 70px 25px;
+    padding: 50px 25px;
     width: 100%;
     background: #1abc9c;
     text-align: center;
@@ -110,6 +110,13 @@ hr {
     border-width: 1px;
     margin-top: 1px;
     margin-bottom: 1px;
+}
+
+title {
+    color: white;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 3px;    
 }
 
 
