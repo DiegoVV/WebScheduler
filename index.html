@@ -7,7 +7,6 @@
     <title>Agendamento</title> <!-- title of tab -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" /> <!-- href = reference to actual file -->
     <!link rel="tab icon" type="image/png" href="img/iconcircle.png" /> <!-- icon on tab -->
 </head>
 
@@ -330,8 +329,8 @@
     document.getElementById("weekday+5").innerHTML = weekday[(w + 5) % 7];
     document.getElementById("weekday+6").innerHTML = weekday[(w + 6) % 7];
     document.getElementById("month").innerHTML = month[m - 1];
-    document.getElementById("year").innerHTML = y;
-    document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+    //document.getElementById("year").innerHTML = y;
+    //document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 </script>
 
 </html>
